@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <style>
+    html,body{
+      height: 100%;
+      /* font-size: 15px; */
+    }
+    .attribution {   display: flex; flex-direction: row; align-items: center; justify-content: center; height: 100%; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .box {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      height: auto;
+    }
+    .card{
+      width: 300px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      padding: 2vw;
+    }
+    
+
+    #Sedans{
+      background-color: hsl(31, 77%, 52%);
+      border-radius: 10px 0 0 10px;
+    }
+    #SUVs{
+      background-color: hsl(184, 100%, 22%);
+    }
+    #Luxury{
+      background-color: hsl(179, 100%, 13%);
+      border-radius: 0 10px 10px 0;
+    }
+
+    h1{
+     color: white;
+     font-family: 'Big Shoulders Display', cursive;
+     font-weight: 700;
+    }
+    .card > p{
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 400;
+      color: white;
+      line-height: 1.8;
+    }
+    .card > button{
+     width: auto;
+     height: auto;
+     font-family: 'Lexend Deca', sans-serif;
+     background-color:  hsl(0, 0%, 95%);
+     border:2px solid white;
+     cursor: pointer;
+     font-weight: 400;
+     padding:20px 40px;
+     margin-top: 30%;
+     border-radius: 30px;
+    }
+
+    .card > button:hover{
+      background-color: transparent;
+
+    }
+
+    #Sedans >button {
+      color: hsl(31, 77%, 52%);
+    }
+    #Sedans >button:hover {
+      color: white;
+    }
+
+    #SUVs >button {
+      color:  hsl(184, 100%, 22%);
+    }
+    #SUVs >button:hover {
+      color: white;
+    }
+
+    #Luxury >button {
+      color:  hsl(184, 100%, 22%);
+    }
+    #Luxury >button:hover {
+      color: white;
+    }
+
+    @media only screen and (max-width:375px){
+      .box{
+        flex-direction: column;
+      }
+      #Sedans{
+        border-radius: 10px 10px 0 0 ;
+    }
+    #Luxury{
+      border-radius: 0 0 10px 10px;
+    }
+    .attribution{
+      align-items: flex-start;
+    }
+    }
+
+  </style>
+</head>
+<body>
+  
+
+  <div class="attribution">
+    <div class="box">
+      <div class="card" id="Sedans">
+        <img src='images/icon-sedans.svg'/>
+        <h1>SEDANS</h1>
+        <p>  Choose a sedan for its <br/>
+          affordability and excellent<br/> fuel economy. Ideal for<br/> cruising in the city 
+          or on your next road trip.
+        </p>
+        <button type="button" >Learn More</button>
+      </div>
+      <div class="card" id="SUVs">
+        <img src='images/icon-suvs.svg'/>
+        <h1>SUVS</h1>
+        <p>   Take an SUV for its spacious<br/>
+           interior, power, and<br/> versatility. Perfect for your<br/>
+            next family vacation and 
+            <br/>off-road adventures.
+        
+        </p>
+        <button type="button" >Learn More</button>
+      </div>
+      <div class="card" id="Luxury">
+        <img src='images/icon-luxury.svg'/>
+        <h1>LUXURY</h1>
+        <p>    Cruise in the best car brands <br/>
+           without the bloated prices.<br/> 
+           Enjoy the enhanced comfort<br/>
+           of a luxury 
+          rental and arrive in style.
+        
+        </p>
+        <button type="button" >Learn More</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
